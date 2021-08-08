@@ -1,0 +1,63 @@
+<?php
+require 'Task2.php';
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+
+    .btn{
+font-size: 25px;
+padding: 10px 16px;
+background-color: lightblue;
+border-radius: 18px;
+font-color:white;
+
+    }
+        </style>
+
+</head>
+
+<body style="background-color:#FFC2C2;">
+
+
+  <form action="Task2.php" method="POST">
+<h1 style="text-align: center;"><em>Robot Commands</em></h1>
+<table style="width: 32.2182%; height: 268px; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr style="text-align: center;">
+<td style="width: 23.9583%; height: 30px;">&nbsp;</td>
+<td style="width: 40.625%; height: 30px;"><span style="color: #ffffff;"><input class="btn" name="dir" type="submit" value="forward" /></span></td>
+<td style="width: 18.6492%; height: 30px;">&nbsp;</td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 23.9583%; height: 30px;"><span style="color: #ffffff;"><input class="btn" name="dir" type="submit" value="left" /></span></td>
+<td style="width: 40.625%; height: 30px;"><span style="color: #ffffff;"><input class="btn" name="dir" type="submit" value="stop" /></span></td>
+<td style="width: 18.6492%; height: 30px;"><span style="color: #ffffff;"><input class="btn" name="dir" type="submit" value="right" /></span></td>
+</tr>
+<tr style="text-align: center;">
+<td style="width: 23.9583%; height: 30px;">&nbsp;</td>
+<td style="width: 40.625%; height: 30px;"><span style="color: #ffffff;"><input class="btn" name="dir" type="submit" value="back" /></span></td>
+<td style="width: 18.6492%; height: 30px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "8a350a0e-ead8-4098-857e-ab1557756262", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "cacf5f7f-8d06-4415-ac57-09aef93597e7", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+
+</body>
+</html>
